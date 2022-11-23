@@ -43,3 +43,5 @@ def say_hello(name="Default"):
     return f"Hello {name}"
 print(say_hello("John")) # This prints "Hello John"
 print(say_hello()) # This prints "Hello Default"
+
+# Functions with logic and conditionals
