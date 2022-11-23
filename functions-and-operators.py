@@ -51,3 +51,14 @@ for item in zip(mylist1, mylist2, mylist3):
     print(item) # This will print the zipped lists
    
 print(list(zip(mylist1, mylist2, mylist3))) # This will print a list of the zipped lists
+
+# How to quickly check if an item is in a list
+
+print('x' in [1,2,3]) # This will return False
+print('x' in ['x', 'y', 'z']) # This will return True
+print('a' in 'a world') # This will return True
+print('mykey' in {'mykey':345}) # This will return True
+
+dict = {'mykey':345}
+print(345 in dict.values()) # This will return True
+print(345 in dict.keys()) # This will return False
