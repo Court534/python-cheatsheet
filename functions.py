@@ -38,10 +38,43 @@ def say_hello(name):
 print(say_hello("John")) # This prints "Hello John"
 # print(say_hello()) You will get a TypeError: say_hello() missing 1 required positional argument: 'name'
 
+
 # You can provide a default value to an argument by using the assignment operator (=).
 def say_hello(name="Default"):
     return f"Hello {name}"
 print(say_hello("John")) # This prints "Hello John"
 print(say_hello()) # This prints "Hello Default"
 
+
 # Functions with logic and conditionals
+def even_check(number):
+    return number % 2 == 0
+
+print(even_check(20)) # This prints True
+print(even_check(21)) # This prints False
+
+# Create a function that returns true if any number is even inside a list
+def check_even_list(num_list):
+    for num in num_list:
+        if num % 2 == 0:
+            return True
+        else:
+            pass
+    return False
+        
+print(check_even_list([1, 3, 5])) # This returns False
+print(check_even_list([2, 4, 5])) # This returns True
+
+# Create a function that returns all the even numbers in a list 
+def check_even_num_list(num_list):
+    even_numbers = []
+    for num in num_list:
+        if num % 2 == 0:
+            even_numbers.append(num)
+        else:
+            pass
+    return even_numbers
+
+print(check_even_num_list([1, 2, 3, 4, 5, 6])) # This returns [2, 4, 6]
+print(check_even_num_list([1, 3, 6, 7, 10, 16 ])) # This returns [6, 10, 16]
+
