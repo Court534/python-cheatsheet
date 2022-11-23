@@ -47,4 +47,10 @@ def employee_check(work_hours):
     return (employee_of_the_month, current_max)
 
 print(employee_check(work_hours)) # prints ('Cassie', 800)
+
+# use tuple unpacking to assign variables to the return value of the function
+name, hours = employee_check(work_hours)
+print(name) # prints Cassie
+print(hours) # prints 800
+print(f'The employee with the most hours was {name} with {hours} hours') # prints The employee with the most hours was Cassie with 800 hours
     
