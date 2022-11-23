@@ -9,3 +9,7 @@ print(mylist) # This will print [1, 2, 3, 4]
 # .pop() removes the last item from a list
 mylist.pop()
 print(mylist) # This will print [1, 2, 3]
+
+# help() will show you the methods available for an object
+
+help(mylist.insert) # This will print the help for the insert method
