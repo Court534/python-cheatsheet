@@ -21,6 +21,7 @@ myfunc(40, 60, 100, 1, 34)
 
 # kwargs allows us to pass multiple arguments without having to define them ot throwing an error and stores them in a dictionary
 def myfunc(**kwargs):
+    print (kwargs) # prints a dictionary
     if 'fruit' in kwargs:
         print('My fruit of choice is {}'.format(kwargs['fruit']))
     else:
