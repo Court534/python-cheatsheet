@@ -28,3 +28,9 @@ def myfunc(**kwargs):
         print('I did not find any fruit here')
         
 myfunc(fruit='apple', veggie='lettuce')
+
+# you can also pass both args and kwargs
+def myfunc(*args, **kwargs):
+    print('I would like {} {}'.format(args[0], kwargs['food']))
+    
+myfunc(10, 20, 30, fruit='orange', food='eggs', animal='dog') # prints I would like 10 eggs
