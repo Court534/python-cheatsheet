@@ -30,9 +30,3 @@ print(list(map(lambda name: name[0], names))) # prints ['A', 'E', 'S']
 
 # How to print the list names backwards
 print(list(map(lambda x: x[::-1], names))) # prints ['ydnA', 'evE', 'yllaS']
-
-
-
-
-
-
