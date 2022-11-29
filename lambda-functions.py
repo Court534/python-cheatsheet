@@ -1,4 +1,5 @@
-# Lambda functions are small anonymous functions.
+# Lambda functions are small anonymous functions. Lambda functions should only be used when a function is required for a short period of time.
+# Make sure to use lambda functions only when they are required and they are readable.
 
 # Example function
 def square(num):
@@ -25,6 +26,12 @@ print(list(filter(lambda num: num%2 == 0, mylist))) # prints [2, 4, 6, 8, 10]
 
 
 names = ['Andy', 'Eve', 'Sally']
+print(list(map(lambda name: name[0], names))) # prints ['A', 'E', 'S']
+
+# How to print the list names backwards
+print(list(map(lambda x: x[::-1], names))) # prints ['ydnA', 'evE', 'yllaS']
+
+
 
 
 
