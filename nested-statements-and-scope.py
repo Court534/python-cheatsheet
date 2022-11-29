@@ -50,5 +50,16 @@ def func(y):
     print(f'I just locally changed Y to {y}')
     
 print(func(y)) # prints Y is 50 and I just locally changed Y to 200
-
 print(y) # prints 50 because y is defined in the global scope
+
+def func():
+    global y # global keyword allows us to change the global variable
+    print(f'Y is {y}')
+
+    # Local reassignment on a global variable
+    y = 'New Value'
+    print(f'I just locally changed global Y to {y}')
+    
+print(y) # prints 50 because y is defined in the global scope
+print(func()) # prints Y is 50 and I just locally changed global Y to New Value
+print(y) # prints New Value because y is defined in the global scope
