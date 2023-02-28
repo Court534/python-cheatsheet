@@ -28,3 +28,12 @@ print(type(result))
 result_int = int(result)
 print(result_int)
 print(type(result_int))
+
+# How to control user input
+def user_choice():
+    
+    choice = input("Please neter an number (0-10): ")
+    
+    return int(choice)
+
+# The issue with the above is that it will accept any input, even if it is not a number and will throw an error
