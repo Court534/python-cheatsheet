@@ -43,12 +43,44 @@ display(row1, row2, row3)
 
 # We can use a while loop to keep asking the user for input until they give us a valid input
 
-def user_choice():
-    choice = "WRONG"
+# def user_choice():
     
-    while choice.isdigit() == False:
+#     choice = "WRONG"
+    
+#     while choice.isdigit() == False:
+#         choice = input("Please enter an number (0-10): ")
+    
+#         if choice.isdigit() == False:
+#             print("Sorry that is not a digit!")
+        
+#     return int(choice)
+
+# user_choice()
+
+# Now the above code is better but not perfect. It will accept any number, even if it is outside of the range we want
+
+# Lets now add a range check to make sure we get a number between 0 and 10
+
+def user_choice():
+    
+    choice = "WRONG"
+    acceptable_range = range(0, 11)
+    within_range = False
+
+    
+    while choice.isdigit() == False or within_range == False:
         choice = input("Please enter an number (0-10): ")
     
+        if choice.isdigit() == False:
+            print("Sorry that is not a digit!")
+            
+        if choice.isdigit() == True:
+            if int(choice) in acceptable_range:
+                within_range = True
+            else:
+                print("Sorry, you are out of acceptable range (0-10")
+                within_range = False
+        
     return int(choice)
 
 user_choice()
