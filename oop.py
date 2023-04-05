@@ -10,10 +10,16 @@ class NameOfClass():
         print(self.param1)
         
 class Dog():
-    def __init__(self, breed):
-       self.breed = breed
+    def __init__(self, breed, name, spots):
+        # Expecting breed and name to be a string
+        self.breed = breed
+        self.name = name
+        # Exspecting spots to be a boolean (True/False)
+        self.spots = spots
        
-pippin = Dog(breed = 'Bichon')
+my_dog = Dog(breed = 'Bichon', name = 'Pippin', spots = False)
 
-print(pippin.breed)
+print(my_dog.name)
+print(my_dog.breed)
+print(my_dog.spots)
         
