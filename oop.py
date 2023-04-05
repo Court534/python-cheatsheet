@@ -9,5 +9,11 @@ class NameOfClass():
         # perfrom some action
         print(self.param1)
         
+class Dog():
+    def __init__(self, breed):
+       self.breed = breed
+       
+pippin = Dog(breed = 'Bichon')
 
+print(pippin.breed)
         
