@@ -8,7 +8,8 @@ class NameOfClass():
     def some_method(self):
         # perfrom some action
         print(self.param1)
-        
+
+# Example 1
 class Dog():
     
     # Class Object Attribute
@@ -33,4 +34,24 @@ print(my_dog.breed)
 print(my_dog.spots)
 print(my_dog.species)
 print(my_dog.bark(10))
+
+
+# Example 2
+class Circle():
+
+    # Class Object Attribute
+    pi = 3.14 
+    
+    def __init__(self, radius=1):
         
+        self.radius = radius
+        
+    # Method
+    def get_circumference(self):
+        return self.radius * self.pi * 2
+    
+my_circle = Circle()
+    
+print(my_circle.pi)
+print(my_circle.radius)
+print(my_circle.get_circumference())
