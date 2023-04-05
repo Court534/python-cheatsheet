@@ -10,6 +10,11 @@ class NameOfClass():
         print(self.param1)
         
 class Dog():
+    
+    # Class Object Attribute
+    # Same for any instance of a class
+    species = 'mammal'
+    
     def __init__(self, breed, name, spots):
         # Expecting breed and name to be a string
         self.breed = breed
@@ -22,4 +27,5 @@ my_dog = Dog(breed = 'Bichon', name = 'Pippin', spots = False)
 print(my_dog.name)
 print(my_dog.breed)
 print(my_dog.spots)
+print(my_dog.species)
         
