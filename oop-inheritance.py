@@ -24,10 +24,17 @@ class Dog(Animal):
      # We can overwrite the existing fuctions we've inherited simply by calling them the same name   
     def who_am_i(self):
         print("I am a dog")
+    
+    # Created a new function    
+    def bark(self):
+        print("WOOF!")
         
 mydog = Dog()
 
 # Calling the the renamed function
 mydog.who_am_i()
+
+# We can also call new functions
+mydog.bark()
     
         
