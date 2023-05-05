@@ -29,6 +29,9 @@ class Dog(Animal):
     def bark(self):
         print("WOOF!")
         
+    def eat(self):
+        print("I am a Dog eating")
+        
 mydog = Dog()
 
 # Calling the the renamed function
@@ -36,5 +39,7 @@ mydog.who_am_i()
 
 # We can also call new functions
 mydog.bark()
+
+mydog.eat()
     
         
