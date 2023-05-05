@@ -42,9 +42,29 @@ for pet in [niko, felix]:
     pet_speak(niko)
     pet_speak(felix)
     
+# Created an abstract method that has not inherited it's parent class
 class Animal():
     def __init__(self, name):
         self.name = name
         
     def speak(self):
         raise NotImplementedError("Subclass must implement this abstract method")
+    
+# myanimal = Animal("Fred")
+# myanimal.speak()
+
+class Dog(Animal):
+    
+        def speak(self):
+            return self.name + " says Woof!"
+class Cat(Animal):
+    
+        def speak(self):
+            return self.name + " says Meow!" 
+        
+fido = Dog("Fido")
+isabelle = Cat("Isabelle")
+
+fido.speak()
+isabelle.speak()
+        
