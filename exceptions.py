@@ -56,3 +56,19 @@ def ask_for_int():
         print("This is the end of the try/except/finally")
         
 ask_for_int()
+
+# Example with a function and a loop
+def ask_for_int():
+    while True:
+        try:
+            result = int(input("Please provide a number: "))
+        except:
+            print("Whoops, thats not a number!")
+            continue
+        else:
+            print(f"You chose the number {result}")
+            break
+        finally:
+            print("This is the end of the try/except/finally")
+        
+ask_for_int()
