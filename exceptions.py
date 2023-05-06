@@ -24,3 +24,12 @@ except:
     print("It looks like you are not adding correctly") # It will run this code as it has incountered an error. You can't add an int and string together this way
 
 # This is handy because the code keeps running even though it encountered an error that would have broken it otherwise.
+
+# You can also add an else to this
+try:
+    result = 10 + 10
+except:
+    print("It looks like you are not adding correctly")
+else:
+    print("Add went well") # The else block will be the output for this as the try was successful it skips the except goes straight to the else.
+    print(result)
