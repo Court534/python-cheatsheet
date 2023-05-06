@@ -36,7 +36,7 @@ def cap_text(text):
 print(cap_text("hello there"))
 
 # Test output:
-# Hello
+# Hello There
 # ..
 # ----------------------------------------------------------------------
 # Ran 2 tests in 0.000s
