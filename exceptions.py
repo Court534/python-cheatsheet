@@ -33,3 +33,14 @@ except:
 else:
     print("Add went well") # The else block will be the output for this as the try was successful it skips the except goes straight to the else.
     print(result)
+    
+# You can also use a finally block
+try:
+    f = open("testfile", "r")
+    f.write("Write a test line")
+except TypeError:                   # You can use multiple excepts
+    print("There was a type error") 
+except OSError:                     # In this example we are looking for specific errors like "TypeError" and "OSError" 
+    print("there was an OSRrror")
+finally:
+    print("I always run no matter what") # The finally block will always run
