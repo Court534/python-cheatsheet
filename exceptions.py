@@ -44,3 +44,15 @@ except OSError:                     # In this example we are looking for specifi
     print("there was an OSRrror")
 finally:
     print("I always run no matter what") # The finally block will always run
+    
+# Example with a function
+def ask_for_int():
+    try:
+        result = int(input("Please provide a number: "))
+        print(f"You chose the number {result}")
+    except:
+        print("Whoops, thats not a number!")
+    finally:
+        print("This is the end of the try/except/finally")
+        
+ask_for_int()
