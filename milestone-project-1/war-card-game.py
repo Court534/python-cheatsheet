@@ -28,5 +28,8 @@ class Deck:
     
     def shuffle(self):
         random.shuffle(self.all_cards)
+        
+    def deal_one():
+        return self.all_cards.pop()
                 
     
