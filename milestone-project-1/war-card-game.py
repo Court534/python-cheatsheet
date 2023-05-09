@@ -25,5 +25,8 @@ class Deck:
             for rank in ranks:
                 create_card = Card(suit, rank)
                 self.all_cards.append(create_card) 
+    
+    def shuffle(self):
+        random.shuffle(self.all_cards)
                 
     
