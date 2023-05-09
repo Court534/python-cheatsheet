@@ -31,5 +31,24 @@ class Deck:
         
     def deal_one():
         return self.all_cards.pop()
-                
+    
+class Player:
+    
+    def __init__(self, name):
+        self.name = name
+        self.all_cards = []
+     
+    def __str__(self):
+        return f"Player {self.name} has {len(self.all_cards)} cards"
+           
+    def remove_one(self):
+        return self.all_cards.pop(0)
+    
+    def add_card(self, new_cards):
+        if type(new_cards) == type([]):
+            # a list of multiple card objects
+            self.all_cards.extend(new_cards)
+        else:
+            # a list of a single card object
+            self.all_cards.append(new_cards)
     
