@@ -29,7 +29,7 @@ class Deck:
     def shuffle(self):
         random.shuffle(self.all_cards)
         
-    def deal_one():
+    def deal_one(self):
         return self.all_cards.pop()
     
 class Player:
@@ -51,4 +51,21 @@ class Player:
         else:
             # a list of a single card object
             self.all_cards.append(new_cards)
+            
+player_one = Player("One")
+player_two = Player("Two")
+
+new_deck = Deck()
+new_deck.shuffle()
+
+for i in range(26):
+    player_one.add_card(new_deck.deal_one())
+    player_two.add_card(new_deck.deal_one())
+    
+game_on = True
+round_num = 0
+
+while game_on == True:
+    round_num += 1 
+    print(f"Round {round_num}")
     
