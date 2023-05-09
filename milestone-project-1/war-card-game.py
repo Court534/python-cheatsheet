@@ -51,21 +51,45 @@ class Player:
         else:
             # a list of a single card object
             self.all_cards.append(new_cards)
-            
+ 
+# Game Logic
+
+# Assign the players           
 player_one = Player("One")
 player_two = Player("Two")
 
+# Create a new deck and then shuffle the deck
 new_deck = Deck()
 new_deck.shuffle()
 
+# Split the deck between the two players (26 cards each)
 for i in range(26):
     player_one.add_card(new_deck.deal_one())
     player_two.add_card(new_deck.deal_one())
-    
+
+# Check to see if the game needs to carry on or stop and count the rounds   
 game_on = True
 round_num = 0
 
 while game_on == True:
     round_num += 1 
     print(f"Round {round_num}")
+    
+    if len(player_one.all_cards) == 0:
+        print("Player One, out of cards! Player Two is the winner!")
+        game_on = False
+        break
+    else: 
+        print("Player Two, out of cards! Player One is the winner!")
+        game_on = False
+        break
+
+    # Start new round
+    player_one_cards = []
+    player_one_cards.append(player_one.remove_one())
+    
+    player_two_cards = []
+    player_two_cards.append(player_two.remove_one())
+    
+    
     
