@@ -79,7 +79,8 @@ while game_on == True:
         print("Player One, out of cards! Player Two is the winner!")
         game_on = False
         break
-    else: 
+    
+    if len(player_two.all_cards) == 0: 
         print("Player Two, out of cards! Player One is the winner!")
         game_on = False
         break
@@ -97,14 +98,14 @@ while game_on == True:
     
     while at_war:
         
-        if player_one_cards[-1].value > player_two_cards[-1].value:
+        if player_one_cards[-1].values > player_two_cards[-1].values:
             
             player_one.add_card(player_one_cards)
             player_one.add_card(player_two_cards)
             
             at_war = False
             
-        elif player_one_cards[-1].value > player_one_cards[-1].value:
+        elif player_one_cards[-1].values > player_one_cards[-1].values:
             
             player_one.add_card(player_two_cards)
             player_one.add_card(player_one_cards)
