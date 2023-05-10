@@ -44,6 +44,12 @@ class Deck:
             for k in rank:
                 create_card = Card(suits, rank)
                 self.deck.append(create_card)
+    
+    def __str__(self):
+        full_deck = ""
+        for card in self.deck:
+            full_deck += "\n" + card.__str__()
+        return f"The deck has: {full_deck}"
                 
     def shuffle(self):
         random.shuffle(self.deck)
