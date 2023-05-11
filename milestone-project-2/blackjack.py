@@ -99,5 +99,64 @@ class Chips:
                     return f"You dont have enough chips, you only have {chips.total} chips left"
                 else:
                     break
+                
+    def hit(deck, hand):
+        hand.add_card()
+        hand.adjust_for_ace()
+        
+    def hit_or_stand():
+        global playing
+        
+        while True:
+            x = input("Hit or Stand?")
+            
+            if x.lower() == "hit":
+                hit(deck, hand)   
+            elif x.lower() == "stand":
+                print("Player stands, Dealers turn")
+                playing = False
+            else:
+                print("Sorry, Please enter Hit or Stand")
+                continue
+            break
+        
+    def show_some(player, dealer):
+        print("\n Dealers hand: ")
+        print("First card hidden!")
+        print(dealer.card[1])
+        
+        print("\n Players cards: ")
+        for card in player.cards:
+            print(card)
+            
+    def show_all(player, dealer):
+        print("\n Dealers final hand: ")
+        for card in dealer.cards:
+            print(cards)
+        print(f"The value of the Dealers hand is: {dealer.value}")
+         
+        print("Players final hand: ")   
+        for card in player.cards:
+            print(cards)
+        print(f"The value of the Players hand is: {player.value}")
+        
+    def player_busts(player, dealer, chips):
+
+        
+
+    def player_wins():
+        pass
+
+    def dealer_busts():
+        pass
+        
+    def dealer_wins():
+        pass
+        
+    def push():
+        pass
+                
+        
+        
         
     
