@@ -86,4 +86,14 @@ class Chips:
     def lose_bet(self):
         self.total -= self.bet
     
+    def take_bet(self, chips):
+        while True:
+            try:
+                chips.bet = input("How many chips would you like to bet?") 
+                self.total -= chips.bet
+                return f"You just bet {chips.bet}, you have {self.total} chips left" 
+            except:
+                if chips.bet > self.total:
+                    return f"You dont have enough chips, you only have {self.total} chips left"
+        
     
