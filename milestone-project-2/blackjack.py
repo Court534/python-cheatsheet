@@ -141,20 +141,42 @@ class Chips:
         print(f"The value of the Players hand is: {player.value}")
         
     def player_busts(player, dealer, chips):
-
+        #if player.cards.value > dealer.cards.value:
+            chips.lose_bet()
+            print("Player busts! Dealer is the winner")
         
+    def player_wins(player, dealer, chips):
+        #if player.cards.value  <= 21 and player.cards.value > dealer.cards.value:
+            chips.win_bet()
+            print("Player wins!")
 
-    def player_wins():
-        pass
-
-    def dealer_busts():
-        pass
+    def dealer_busts(player, dealer, chips):
+        #if dealer.cards.value > 21:
+            chips.lose_bet
+            print(f"Dealer busts with {dealer.cards.value}, Player wins!")
         
-    def dealer_wins():
-        pass
+    def dealer_wins(player, dealer, chips):
+        # if dealer.cards.value <= 21 and dealer.cards.value > player.cards.value:
+            chips.win_bet
+            print("Dealer wins!")
         
-    def push():
-        pass
+    def push(player, dealer, chips):
+        print("It's a tie!")
+        
+    while True:
+        print("Welcome to BlackJack!")
+        
+        # Create and shuffle the deck
+        deck = Deck()
+        deck.shuffle()
+        
+        # Create players hand
+        player_hand = Hand()
+        player_hand.add_card(deck.deal_one())
+        
+        # Create dealers hand 
+        dealer_hand = Hand()
+        dealer_hand.add_card(deck.deal_one())
                 
         
         
