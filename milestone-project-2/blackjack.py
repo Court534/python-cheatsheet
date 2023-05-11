@@ -89,11 +89,15 @@ class Chips:
     def take_bet(self, chips):
         while True:
             try:
-                chips.bet = input("How many chips would you like to bet?") 
-                self.total -= chips.bet
-                return f"You just bet {chips.bet}, you have {self.total} chips left" 
+                chips.bet = int(input("How many chips would you like to bet? ")) 
+                chips.total -= chips.bet
+                return f"You just bet {chips.bet}, you have {chips.total} chips left" 
             except:
-                if chips.bet > self.total:
-                    return f"You dont have enough chips, you only have {self.total} chips left"
+                print("Sorry, please provide an integer")
+            else:
+                if chips.bet > chips.total:
+                    return f"You dont have enough chips, you only have {chips.total} chips left"
+                else:
+                    break
         
     
